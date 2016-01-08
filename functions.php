@@ -63,6 +63,4 @@ function ranno_cmzr_afterfooter(){
 }
 add_action ( '__after_footer'  , 'ranno_cmzr_afterfooter' );
 
-require_once('inc/parts/class-content-post_thumbnails.php');
-
 ?>
