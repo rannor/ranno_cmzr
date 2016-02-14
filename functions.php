@@ -14,6 +14,7 @@ function my_custom_credits(){
 
 //RR lisa TEST
 function ranno_cmzr_scripts() {
+	
 	// fancybox
 	wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.js', array('jquery'), '3.0.1');
 	wp_enqueue_style( 'fancybox-css', get_stylesheet_directory_uri() . '/css/jquery.fancybox.css', array(), '3.0.1' );
@@ -21,6 +22,7 @@ function ranno_cmzr_scripts() {
 	wp_enqueue_script('psw-klass', get_stylesheet_directory_uri() . '/js/klass.min.js', array('jquery'), '3.0.5');
 	wp_enqueue_script('psw-jquery', get_stylesheet_directory_uri() . '/js/code.photoswipe.jquery-3.0.5.js', array('jquery', 'psw-klass'), '3.0.5');
 	wp_enqueue_style('psw-css-rr', get_stylesheet_directory_uri() . '/css/photoswipe.css', '1.1');
+
 }
 add_action( 'wp_enqueue_scripts', 'ranno_cmzr_scripts');
 
@@ -66,9 +68,13 @@ add_action ( '__after_footer'  , 'ranno_cmzr_afterfooter' );
 ##testing 02.02.2016
 #  replace /th/ with /w600/ for development checking
 
-//add_filter('the_content', 'replace_th', 20);
+add_filter('the_content', 'replace_th', 20);
 function replace_th($content){ 
 	$content = str_replace("/th/","/w600/",$content);
+	$content = str_replace('width="400"','',$content);
+	$content = str_replace('width="190"','',$content);
+	$content = str_replace('width: 400px','',$content);
+	$content = str_replace('width="390"','',$content);
 	return $content;
 }
 

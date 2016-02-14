@@ -33,3 +33,89 @@ h2.site-description {
 .navbar .nav > li > a:first-letter {
     font-size: inherit; 
 }
+
+/*** Grid system and page structure ***/
+/*** # ~ for all adjacent siblings***/
+.post, .post ~ hr, .post ~ div, .post ~ nav {
+  width: 600px;
+}
+.tc-post-list-grid article .entry-title {
+    font-size: 30px;
+    line-height: 32px;
+}
+.tc-post-list-grid .tc-g-cont {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+@media (min-width: 1200px) {
+  .post, .post ~ hr, .post ~ div, .post ~ nav {
+    width: 600px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.post, .post ~ hr, .post ~ div, .post ~ nav {
+		width: 538px;
+  }
+  .tc-post-list-grid article .entry-title {
+    font-size: 22px;
+    line-height: 24px;
+}
+.tc-post-list-grid .tc-g-cont {
+    font-size: 14px;
+    line-height: 16px;
+}
+  
+}
+
+@media (max-width: 767px) {
+	[class*="post"],
+  .row-fluid [class*="post"], .post ~ hr, .post ~ div, .post ~ nav {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+    .tc-post-list-grid article .entry-title {
+    font-size: 30px;
+    line-height: 32px;
+}
+.tc-post-list-grid .tc-g-cont {
+    font-size: 18px;
+    line-height: 20px;
+}
+}
+
+/* tc addons */
+h1 {
+  font-size: 52px;
+  line-height: 56px;
+}
+
+.entry-meta {
+  font-size: 14px;
+}
+
+.comment-meta a.comment-date {
+  font-size: 14px;
+}
+
+.commentlist > .comment,
+.commentlist > .trackback,
+.commentlist > .pingback,
+.CommentForm > .comment,
+.comment ul > .comment {
+  list-style: none;
+  position: relative;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+	line-height: 26px;
+}
+
+.comment cite {
+	font-weight: bold;
+}
