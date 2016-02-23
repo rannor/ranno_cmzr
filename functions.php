@@ -65,18 +65,4 @@ function ranno_cmzr_afterfooter(){
 }
 add_action ( '__after_footer'  , 'ranno_cmzr_afterfooter' );
 
-##testing 02.02.2016
-#  replace /th/ with /w600/ for development checking
-
-add_filter('the_content', 'replace_th', 20);
-function replace_th($content){ 
-	$content = str_replace("/th/","/w600/",$content);
-	$content = str_replace('width="400"','',$content);
-	$content = str_replace('width="190"','',$content);
-	$content = str_replace('width: 400px','',$content);
-	$content = str_replace('width="390"','',$content);
-	return $content;
-}
-
-## end 02.02.2016
 ?>
