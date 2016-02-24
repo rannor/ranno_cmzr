@@ -116,25 +116,25 @@ div.ps-toolbar-close, div.ps-toolbar-previous, div.ps-toolbar-next, div.ps-toolb
 .ps-toolbar-next:before  {
         display: inline-block;
         -webkit-font-smoothing: antialiased;
-        font: normal 32px/1 'Genericons';
+        font: normal 32px/1 'FontAwesome';
         vertical-align: middle;
         padding: 8px 0;
 }
 
 .ps-toolbar-play:before {
-	content: '\f452';
+	content: '\f144';
 }
 
 .ps-toolbar-close:before {
-	content: '\f405';
+	content: '\f00d';
 }
 
 .ps-toolbar-previous:before {
-	content: '\f430';
+	content: '\f053';
 }
 
 .ps-toolbar-next:before {
-	content: '\f429';
+	content: '\f054';
 }
 
 .ps-toolbar-previous-disabled,
